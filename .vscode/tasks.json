@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Open Bevy Docs",
+      "type": "shell",
+      "command": "start",
+      "args": ["${config:bevyDocsPath}/bevy/index.html"],
+      "presentation": { "reveal": "silent" },
+      "problemMatcher": []
+    }
+  ]
+} 

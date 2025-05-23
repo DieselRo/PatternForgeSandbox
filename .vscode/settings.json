@@ -1,0 +1,5 @@
+{
+  "files.associations": { "*.rs": "rust" },
+  // Workspace-relative path to the offline Bevy HTML root
+  "bevyDocsPath": "${workspaceFolder}/docs/bevy-html"
+} 
