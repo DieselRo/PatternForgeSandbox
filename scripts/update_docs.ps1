@@ -15,7 +15,9 @@ cargo doc --package bevy --no-deps --release   # matches fixed Bash script
 Remove-Item -Recurse -Force "docs/bevy-html"
 Copy-Item "target/doc" "docs/bevy-html" -Recurse
 
-"$Tag | $(rustc --version --short) | $(Get-Date -Format yyyy-MM-dd)" |
+# Extract the first "x.y.z" from the full version string
+$rver = (rustc --version) -replace '[^\d\.]', '' -replace '(\d+\.\d+\.\d+).*', '$1'
+"$Tag | $rver | $(Get-Date -Format yyyy-MM-dd)" |
     Out-File -Encoding utf8 "docs/VERSION.txt"
 
 Write-Host "Docs updated to Bevy $Tag" 
