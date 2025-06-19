@@ -3,6 +3,13 @@ use std::time::Duration;
 use bevy::{log::LogPlugin, prelude::*, time::common_conditions::on_timer};
 use rand::{seq::IteratorRandom, thread_rng, Rng};
 
+mod states;
+mod core;
+mod player;
+mod enemy;
+mod ui;
+mod editor;
+
 fn main() {
     App::new()
         .add_plugins((MinimalPlugins, LogPlugin::default()))
