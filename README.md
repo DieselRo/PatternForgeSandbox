@@ -10,7 +10,9 @@ Run the game in debug mode:
 cargo run
 ```
 
-When running in debug, open the **World Inspector** by pressing **F1**.
+The **World Inspector** is compiled only in debug builds. It relies on
+`EguiPlugin` being added before `WorldInspectorPlugin` in `main.rs`. When
+running in debug, open the inspector by pressing **F1**.
 
 For a production-ready build:
 
